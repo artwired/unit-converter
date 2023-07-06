@@ -1,0 +1,108 @@
+/* Josh Comeau Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+input,
+button {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  background: #1c1c1c;
+}
+
+/* My CSS below this point */
+input:focus {
+  outline: none;
+}
+
+#app-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+  width: 550px;
+  height: 285px;
+  background: #6943ff;
+  text-align: center;
+  padding: 34px;
+}
+.intro-txt {
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+#num-input-field {
+  font-size: 58px;
+  font-weight: 800;
+  min-width: 0;
+  width: 117px;
+  height: 83px;
+  margin: 30px auto 25px;
+  border-radius: 5px;
+  border: 2px solid #b295ff;
+  text-align: center;
+  color: #fff;
+  background: #6943ff;
+}
+#convert-btn {
+  padding: 9px 27.5px;
+  font-size: 16px;
+  align-self: center;
+  justify-content: center;
+  line-height: 24px;
+  color: #3d3d3d;
+  cursor: pointer;
+}
+
+#conversions-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+  width: 100%;
+  background: #f4f4f4;
+  text-align: center;
+  padding: 36px;
+}
+#conversions-section h3 {
+  color: #5a537b;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+}
+#volume-container {
+  margin: 23px 0;
+}
+.unit-container {
+  max-width: 500px;
+  background: #fff;
+  padding: 30px 0;
+}
+.conversions {
+  color: #353535;
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 12px;
+}
