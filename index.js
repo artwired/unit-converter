@@ -30,21 +30,25 @@ convertBtn.addEventListener("click", initialRender);
 
 function initialRender() {
   const unitInputValue = unitInputField.value;
-  let cards = "";
+  if (unitInputValue >= 0) {
+    let cards = "";
 
-  for (let i = 0; i < conversionObjects.length; i++) {
-    cards += `<div id=${conversionObjects[i].idTag} class="unit-container">
+    for (let i = 0; i < conversionObjects.length; i++) {
+      cards += `<div id=${conversionObjects[i].idTag} class="unit-container">
                   <h3>${conversionObjects[i].title}</h3>
                   <p class="conversions">${unitInputValue} ${
-      conversionObjects[i].unitOne
-    } = ${(conversionObjects[i].baseMeasurement * unitInputValue).toFixed(3)} ${
-      conversionObjects[i].unitTwo
-    } | ${unitInputValue} ${conversionObjects[i].unitTwo} = ${(
-      unitInputValue / conversionObjects[i].baseMeasurement
-    ).toFixed(3)} ${conversionObjects[i].unitOne}</p>
+        conversionObjects[i].unitOne
+      } = ${(conversionObjects[i].baseMeasurement * unitInputValue).toFixed(
+        3
+      )} ${conversionObjects[i].unitTwo} | ${unitInputValue} ${
+        conversionObjects[i].unitTwo
+      } = ${(unitInputValue / conversionObjects[i].baseMeasurement).toFixed(
+        3
+      )} ${conversionObjects[i].unitOne}</p>
               </div>`;
-  }
+    }
 
-  conversionCard.innerHTML = cards;
+    conversionCard.innerHTML = cards;
+  }
 }
 initialRender();
