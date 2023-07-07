@@ -116,7 +116,7 @@ input:focus {
   padding-top: 12px;
 }
 @media (max-width: 600px) {
-  #conversions-section h3 {
-    font-size: 14px;
+  .intro-txt {
+    font-size: 1.5rem;
   }
 }
